@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-pills"></i>
+                <h1>Farmacia Salud</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar medicamentos...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart" id="cart-btn"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </header>
+
+        <!-- Navegación -->
+        <nav class="categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="medicamentos">Medicamentos</button>
+            <button class="category-btn" data-category="cuidado-personal">Cuidado Personal</button>
+            <button class="category-btn" data-category="vitaminas">Vitaminas</button>
+            <button class="category-btn" data-category="maternidad">Maternidad</button>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <h2>Productos Destacados</h2>
+            <div class="products-grid" id="products-container">
+                <!-- Los productos se cargarán aquí con JavaScript -->
+            </div>
+        </main>
+
+        <!-- Carrito de compras (oculto inicialmente) -->
+        <div class="cart-overlay" id="cart-overlay">
+            <div class="cart-container">
+                <div class="cart-header">
+                    <h2>Tu Carrito</h2>
+                    <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="cart-items" id="cart-items">
+                    <!-- Los items del carrito se cargarán aquí -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span id="cart-total">$0.00</span></p>
+                    <button class="checkout-btn" id="checkout-btn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© 2023 Farmacia Salud - Todos los derechos reservados</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-phone"></i> Contacto</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Locales</a>
+                <a href="#"><i class="fas fa-info-circle"></i> Nosotros</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
